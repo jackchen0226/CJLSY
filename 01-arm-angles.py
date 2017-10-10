@@ -1,3 +1,5 @@
+#TODO Convert numpy to math library
+import math
 import numpy as np
 import pickle
 
@@ -5,10 +7,12 @@ LENGTH_FOREARM = 9
 LENGTH_BICEP = 12
 
 def cosines_law_(A, B, C):
-    return np.degrees(np.arccos(((C**2 - A**2 - B**2)/(-2 * A * B))))
+    #return np.degrees(np.arccos(((C**2 - A**2 - B**2)/(-2 * A * B))))
+    return math.degrees(math.acos((C**2 - A**2 - B**2)/(-2 * A * B)))
 
 def sines_law_(c_, length):
-    return np.degrees(np.arcsin(length * c_))
+    #return np.degrees(np.arcsin(length * c_))
+    return math.degrees(math.asin(length * c_))
 
 import click
 
@@ -23,8 +27,8 @@ def cart_to_angles(x, y, l1=LENGTH_FOREARM, l2=LENGTH_BICEP):
     r = np.sqrt(x ** 2 + y ** 2)
     # theta1 is the angle bound by origin
     # theta2 is angle found near the cartesian point
-    theta1 = np.arcsin(y/r)
-    theta2 = np.arcsin(x/r)
+    theta1 = math.asin(y/r)
+    theta2 = math.asin(x/r)
 
     # Law of Cosines: C ** 2 = A ** 2 + B ** 2 - 2ABcos(c)
     # Rewritten: arccos((C ** 2 - A ** 2 - B ** 2)/(-2 * A * B))
