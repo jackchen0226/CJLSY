@@ -5,7 +5,7 @@ LENGTH_FOREARM = 9
 LENGTH_BICEP = 12
 
 def cosines_law_(A, B, C):
-    return np.arccos((C**2 - A**2 - B**2)/(-2 * A * B))
+    return np.degrees(np.arccos(((C**2 - A**2 - B**2)/(-2 * A * B))))
 
 def sines_law_(c_, length):
     return np.degrees(np.arcsin(length * c_))
