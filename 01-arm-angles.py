@@ -33,14 +33,15 @@ def cart_to_angles(x, y, l1=LENGTH_FOREARM, l2=LENGTH_BICEP):
 
     # Law of Cosines: C ** 2 = A ** 2 + B ** 2 - 2ABcos(c)
     # Rewritten: arccos((C ** 2 - A ** 2 - B ** 2)/(-2 * A * B))
-    print(l1, l2, r)
+    
     elbow_angle = cosines_law_(l1, l2, r)
 
     # Law of Sines: sin(a)/A = sin(b)/B = sin(c)/C
     # sin(c)/C = c_, Rewritten: b = arcsin(Bc_), a = arcsin(Ac_)
     #TODO: check if below works with ALL cartesian points => theta1
     shoulder_angle = sines_law_(math.sin(math.radians(elbow_angle))/r, l1) + theta1
-
+    print(elbow_angle)
+    print(shoulder_angle)
     return elbow_angle, shoulder_angle
 
 if __name__ == '__main__':
