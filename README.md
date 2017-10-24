@@ -36,12 +36,16 @@ pip install click
 When this repository is cloned, `01-arm-angles.py` will not initially run. This is because the length of the arm must be set first. This can be done
 with `set-arm-length.py`.
 
-IN: `python3 set-arm-length.py`
-OUT: `Set length of arm:`
+```
+python3 set-arm-length.py
+Set length of arm:
+```
 
 This will pickle the length of the arm into a .pkl file, "armlengths.pkl" which `01-arm-angles.py` utilizes.
 
-IN: `python3 01-arm-angles.py`
-OUT: `X value?`
-OUT: `Y value?`
-OUT: `Shoulder angle: #, Elbow angle: #`
+```
+python3 01-arm-angles.py`
+X value?
+Y value?
+Shoulder angle: #, Elbow angle: #
+```
