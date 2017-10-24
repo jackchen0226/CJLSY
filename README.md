@@ -45,7 +45,7 @@ This will pickle the length of the arm into a .pkl file, "armlengths.pkl" which 
 
 ```
 python3 01-arm-angles.py`
-X value?
-Y value?
+X value?:
+Y value?:
 Shoulder angle: #, Elbow angle: #
 ```
