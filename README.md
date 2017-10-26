@@ -33,7 +33,7 @@ pip install click
 
 ### How to use
 
-When this repository is cloned, `01-arm-angles.py` will not initially run. This is because the length of the arm must be set first. This can be done
+When this repository is cloned, `01-arm-angles.py` will not initially run. This is because the length of the arm must be set first In the units that your coordinate grid uses. This can be done
 with `set-arm-length.py`.
 
 ```
